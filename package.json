@@ -1,0 +1,12 @@
+{
+  "name": "discord-statistics",
+  "version": "0.0.1",
+  "main": "app.js",
+  "repository": "git@github.com:StevenBrons/DiscordStatistics.git",
+  "author": "Steven Bronsveld and Noah Loomans",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "discord.js": "^11.3.2"
+  }
+}
