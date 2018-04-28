@@ -3,11 +3,11 @@ CREATE TABLE `guilds` (
   `ownerId` varchar(18) NOT NULL,
   `name` varchar(45) NOT NULL,
   `memberCount` int(11) NOT NULL,
-  `created` timestamp(6) NOT NULL,
+  `created` timestamp NOT NULL,
   `region` varchar(45) NOT NULL,
   `splash` varchar(45) DEFAULT NULL,
   `iconUrl` varchar(88) DEFAULT NULL,
-  `timestamp` timestamp(6) NOT NULL,
+  `timestamp` timestamp NOT NULL,
   PRIMARY KEY (`id`)
 );
 
@@ -16,7 +16,7 @@ CREATE TABLE `presence` (
   `userId` varchar(18) NOT NULL,
   `status` varchar(45) DEFAULT NULL,
   `game` varchar(45) DEFAULT NULL,
-  `timestamp` timestamp(1) NOT NULL,
+  `timestamp` timestamp NOT NULL,
   PRIMARY KEY (`pk`)
 );
 
@@ -30,6 +30,6 @@ CREATE TABLE `users` (
   `joined` varchar(45) DEFAULT NULL,
   `color` varchar(45) DEFAULT NULL,
   `bot` bit(1) DEFAULT NULL,
-  `timestamp` timestamp(6) NOT NULL,
+  `timestamp` timestamp NOT NULL,
   PRIMARY KEY (`id`),
 );
