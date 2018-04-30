@@ -16,4 +16,4 @@ client.on('presenceUpdate', (oldMember, newMember) => {
   console.log('newMember:', newMember);
 });
 
-client.login(process.env.KEY);
+client.login(process.env.DISCORD_KEY);
