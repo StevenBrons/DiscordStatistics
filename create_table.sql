@@ -8,7 +8,6 @@ CREATE TABLE `guilds` (
   `region` VARCHAR(45) NOT NULL,
   `splash` VARCHAR(45) DEFAULT NULL,
   `iconUrl` VARCHAR(88) DEFAULT NULL,
-  `timestamp` DATETIME NOT NULL,
   PRIMARY KEY (`id`)
 );
 
@@ -22,18 +21,17 @@ CREATE TABLE `presence` (
   PRIMARY KEY (`pk`)
 );
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE `users` (
+DROP TABLE IF EXISTS `guildMembers`;
+CREATE TABLE `guildMembers` (
   `pk` INT(11) NOT NULL AUTO_INCREMENT,
   `id` VARCHAR(18) NOT NULL,
-  `guildId` VARCHAR(18) DEFAULT NULL,
-  `discriminator` SMALLINT NOT NULL,
+  `guildId` VARCHAR(18) NOT NULL,
+  `discriminator` VARCHAR(4) NOT NULL,
   `avatar` VARCHAR(100) DEFAULT NULL,
-  `displayname` VARCHAR(32) DEFAULT NULL,
-  `joined` VARCHAR(45) DEFAULT NULL,
+  `displayName` VARCHAR(32) NOT NULL,
+  `joinedAt` DATETIME NOT NULL,
   `color` VARCHAR(45) DEFAULT NULL,
   `bot` BIT(1) NOT NULL,
-  `timestamp` DATETIME NOT NULL,
   -- In reality the pk is id + guildId, but guildId has to be null. So we will
   -- check this before insertion
   PRIMARY KEY (`pk`)
