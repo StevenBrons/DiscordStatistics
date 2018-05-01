@@ -1,6 +1,5 @@
-.env
 
-# Created by https://www.gitignore.io/api/node,linux,windows
+# Created by https://www.gitignore.io/api/node,linux,windows,visualstudiocode
 
 ### Linux ###
 *~
@@ -78,6 +77,14 @@ typings/
 .env
 
 
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history
+
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
@@ -100,4 +107,4 @@ $RECYCLE.BIN/
 *.lnk
 
 
-# End of https://www.gitignore.io/api/node,linux,windows
+# End of https://www.gitignore.io/api/node,linux,windows,visualstudiocode
