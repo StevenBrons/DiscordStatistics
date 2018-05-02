@@ -28,11 +28,7 @@ async function main() {
   client.on('guildMemberUpdate', (oldMember, newMember) => {
     console.log('guildMemberUpdate', newMember);
     database.setGuildMember(newMember);
-  });
-
-  client.on('guildMemberUpdate', (oldMember, newMember) => {
-    console.log('guildMemberUpdate', newMember);
-    database.setGuildMember(newMember);
+    database.setGuild(newMember.guild);
   });
 
   client.on('guildUpdate', (oldGuild, newGuild) => {
