@@ -21,8 +21,8 @@ CREATE TABLE `presence` (
   PRIMARY KEY (`pk`)
 );
 
-DROP TABLE IF EXISTS `guildMembers`;
-CREATE TABLE `guildMembers` (
+DROP TABLE IF EXISTS `guildmembers`;
+CREATE TABLE `guildmembers` (
   `pk` INT(11) NOT NULL AUTO_INCREMENT,
   `id` VARCHAR(18) NOT NULL,
   `guildId` VARCHAR(18) NOT NULL,
