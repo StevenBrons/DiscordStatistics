@@ -17,7 +17,7 @@ CREATE TABLE `presence` (
   `userId` VARCHAR(18) NOT NULL,
   `status` VARCHAR(45) DEFAULT NULL,
   `game` VARCHAR(45) DEFAULT NULL,
-  `timestamp` DATETIME NOT NULL,
+  `timestamp` DATETIME DEFAULT CURRENT_TIMESTAMP NULL,
   PRIMARY KEY (`pk`)
 );
 
